@@ -19,9 +19,9 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="dodajRecept.css">
 
-    <script src="register.js"></script>
+    <script src="dodajRecept.js"></script>
 
     <title>
         Web kuvar
@@ -29,6 +29,7 @@
 </head>
 
 <body>
+    
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">Web kuvar</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -48,7 +49,7 @@
                     <a class="nav-link" href="" id="logout">Logout</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../dodajRecept/dodajRecept.html" id="create_post">Add recepie</a>
+                    <a class="nav-link" href="" id="create_post">Add recepie</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="../recepti/recepti.html">Show recepie</a>
@@ -58,43 +59,47 @@
         </ul>
         </div>
     </nav>
-    <div class="alert alert-danger alter-dismissible fade show" role="alert" hidden="true">
-        Greska u autentikaciji
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-    </div>
+    <h4>
+        Dodaj recept
+    </h4>
     <div class="alert alert-success alter-dismissible fade show" role="alert" hidden="true">
-        Uspesno registrovanje
+        Uspesno dodat recept
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
     </div>
 
     <div class="form-group">
         <div class="form-group">
-            <label for="name">Name</label>
+            <label for="name">Ime jela</label>
             <input type="text" class="form-control" id="name" name="name" placeholder="Name">
         </div>
         <div class="form-group">
-            <label for="surname">Surname</label>
-            <input type="text" class="form-control" id="surname" name="surnname" placeholder="Surname">
+            <div class="form-group">
+                <label for="image">Upload image</label>
+                <input type="file" class="form-control-file" id="image">
+            </div>
+
         </div>
         <div class="form-group">
-            <label for="username">Username</label>
-            <input type="text" class="form-control" id="username" name="username" placeholder="Username">
+            <label for="username">How to cook</label>
+            <textarea class="form-control" id="username" name="username" placeholder="How to..." rows="5"></textarea>
         </div>
         <div class="form-group">
-            <label for="password">Password</label>
-            <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+            <label for="category">Category</label>
+            <select name="category" id="category" class="form-select">
+                <option value="Salate">Salate</option>
+                <option value="Torte i kolaci">Torte i kolaci</option>
+                <option value="Supe i corbe">Supe i corbe</option>
+                <option value="Morski plodovi">Morski plodovi</option>
+                <option value="Glavna jela">Glavna jela</option>
+            </select>
+            
         </div>
         <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+            <label for="Work duration">Work duration in minutes</label>
+            <input type="number" class="form-control" id="Work duration" name="Work duration" placeholder="Work duration" min="0" max="100000">
         </div>
-        <div class="form-group">
-            <label for="password2">Confirm password</label>
-            <input type="password" class="form-control" id="password2" name="password2" placeholder=" Confirm password">
-        </div>
-        <button type="submit" class="btn btn-primary btn-success">Sign up</button>
+        <button type="submit" class="btn btn-primary btn-success">Add recepie</button>
     </div>
 
 </body>
