@@ -10,3 +10,7 @@ const addCategoryTag = (tagName) => {
 const filterRecepiesByGroceries = () => {
     alert("Filtriraj recepte po namirnicama iz kuce")
 }
+
+const showFavorites = () => {
+    alert("Prikazi omiljene recepte!");
+} 

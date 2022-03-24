@@ -68,7 +68,15 @@
                         <input class="form-control mr-sm-2" type="search" placeholder="Search by name" aria-label="Search"> 
                     </div>
                     <div>
-                        <button class="btn btn-secondary">
+                        <button class="btn btn-warning" onclick="showFavorites()">
+                            Prikazi omiljene
+                        </button>
+                        <p>
+                            (samo reg korinsik)
+                        </p>
+                    </div>
+                    <div>
+                        <button class="btn btn-secondary" onclick="filterRecepiesByGroceries()">
                             Recepti za namirnice iz kuce  
                         </button>
                         <p>
@@ -169,7 +177,7 @@
                         <i onclick="rate()" class='fa fa-star'></i>
                     </div>
                     <a href="">Dodaj u omiljene</a>
-                    <button class="btn btn-danger" onclick="filterRecepiesByGroceries()">Delete recepie(admin samo)</button>
+                    <button class="btn btn-danger" >Delete recepie(admin samo)</button>
                 </div>
             </div>
             <div class="col-sm-12 col-md-4">
