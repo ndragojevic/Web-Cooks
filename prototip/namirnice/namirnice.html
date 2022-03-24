@@ -19,9 +19,9 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="namirnice.css">
 
-    <script src="login.js"></script>
+    <script src="namirnice.js"></script>
 
     <title>
         Web kuvar
@@ -38,7 +38,7 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
+                <li class="nav-item ">
                     <a class="nav-link" href="login.html" id="login">Login </a>
                 </li>
                 <li class="nav-item">
@@ -54,35 +54,52 @@
                     <a class="nav-link" href="../recepti/recepti.html">Show recepies</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../namirnice/namirnice.html">Prikazi namirnice</a>
+                    <a class="nav-link active" href="../namirnice/namirnice.html">Prikazi namirnice</a>
                 </li>
-                
         </div>
         </li>
         </ul>
         </div>
     </nav>
-    <div class="alert alert-danger alter-dismissible fade show" role="alert" hidden="true">
-        Greska u autentikaciji
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-    </div>
-    <div class="alert alert-success alter-dismissible fade show" role="alert" hidden="true">
-        Uspesno logovanje
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-    </div>
+
     
-        <div class="form-group">
-            <div class="form-group">
-                <label for="username">Username</label>
-                <input type="text" class="form-control" id="username" name="username" placeholder="Name">
-            </div>
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" class="form-control" id="password" name="password" placeholder="Password">
-            </div>
-            <button  class="btn btn-primary " onclick="login(document.getElementById('username').value,document.getElementById('password').value)">Login</button>
-        </div>
 </body>
+Korinik namirnice:
+<table class="table table-stripped table-hover">
+    <thead class="thead-dark">
+        <tr>
+            <th>Ime sastojka</th>
+            <th>Kolicina</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Meso</td>
+            <td>200g</td>
+            <td>
+                <button class="btn btn-danger" onclick="obrisiNamirnicu()">Delete</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Paradajz</td>
+            <td>50g</td>
+            <td>
+                <button class="btn btn-danger" onclick="obrisiNamirnicu()">Delete</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" class="" placeholder="Ime namirnice">
+            </td>
+            <td >
+                <input type="text" class="" placeholder="Kolicina namirnice">
+            </td>
+            <td>
+                <button class="btn btn-info" onclick="dodajNamirnicu()">Add</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
 </html>
