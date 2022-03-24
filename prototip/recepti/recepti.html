@@ -62,9 +62,19 @@
     </nav>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-6 col-md-4">
-                <div class="form-inline">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search by name" aria-label="Search"> 
+            <div class="col-sm-12 col-md-12">
+                <div class="row-line">
+                    <div class="form-inline">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search by name" aria-label="Search"> 
+                    </div>
+                    <div>
+                        <button class="btn btn-secondary">
+                            Recepti za namirnice iz kuce  
+                        </button>
+                        <p>
+                            (samo reg korinsik)
+                        </p>
+                    </div>
                 </div>
                 <div class="dropdown">
                     <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
@@ -84,6 +94,7 @@
                         Kategorija 
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
+                        </button>
                     </span>
                 </div>
             </div>
@@ -158,7 +169,7 @@
                         <i onclick="rate()" class='fa fa-star'></i>
                     </div>
                     <a href="">Dodaj u omiljene</a>
-                    <button class="btn btn-danger">Delete recepie(admin samo)</button>
+                    <button class="btn btn-danger" onclick="filterRecepiesByGroceries()">Delete recepie(admin samo)</button>
                 </div>
             </div>
             <div class="col-sm-12 col-md-4">
