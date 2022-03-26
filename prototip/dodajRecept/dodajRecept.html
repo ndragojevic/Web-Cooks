@@ -1,3 +1,8 @@
+<!--
+    autor : Nikola Jovanovic
+    indeks : 2019/0440
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -74,11 +79,41 @@
             <input type="text" class="form-control" id="name" name="name" placeholder="Name">
         </div>
         <div class="form-group">
-            <div class="form-group">
-                <label for="image">Upload image</label>
-                <input type="file" class="form-control-file" id="image">
-            </div>
+            <label for="image">Upload image</label>
+            <input type="file" class="form-control-file" id="image">
+        </div>
 
+        <div class="form-group">
+            <label for="namirnice">Dodaj namirnice</label>
+            <table class="table table-stripped table-hover " name="namirnice" id="namirnice">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Ime sastojka</th>
+                        <th>Kolicina</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sos</td>
+                        <td>100g</td>
+                        <td>
+                            <button class="btn btn-danger" onclick="obrisiNamirnicu()">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" class="" placeholder="Ime namirnice">
+                        </td>
+                        <td>
+                            <input type="text" class="" placeholder="Kolicina namirnice">
+                        </td>
+                        <td>
+                            <button class="btn btn-info" onclick="dodajNamirnicu()">Add</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
         <div class="form-group">
             <label for="username">How to cook</label>
