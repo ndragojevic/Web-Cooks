@@ -10,3 +10,7 @@ const dodajNamirnicu = () => {
 const obrisiNamirnicu = () => {
     alert("Namirnica obrisana");
 }
+
+const dodajRecept = () => {
+    alert("Recept uspesno dodan");
+}

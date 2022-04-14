@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-                                            
+
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -45,19 +45,22 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="login.html" id="login">Login </a>
+                    <a class="nav-link" href="login.html" id="login">Prijava </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../register/register.html" id="sign-up">Register</a>
+                    <a class="nav-link" href="../register/register.html" id="sign-up">Registracija</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="" id="logout">Logout</a>
+                    <a class="nav-link" href="" id="logout">Odjava</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../dodajRecept/dodajRecept.html"id="create_post">Add recepie</a>
+                    <a class="nav-link" href="../dodajRecept/dodajRecept.html" id="create_post">Dodaj recept</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../recepti/recepti.html">Show recepies</a>
+                    <a class="nav-link" href="../recepti/recepti.html">Prikazi recepte</a>
+                </li>
+                <li class="nav-item">
+                     <a class="nav-link active" href="../namirnice/namirnice.html">Prikazi namirnice</a>
                 </li>
         </div>
         </li>
@@ -69,7 +72,8 @@
             <div class="col-sm-12 col-md-12">
                 <div class="row-line">
                     <div class="form-inline">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search by name" aria-label="Search"> 
+                        <input class="form-control mr-sm-2" type="search" placeholder="Pretrazi po imenu"
+                            aria-label="Search">
                     </div>
                     <div>
                         <button class="btn btn-warning" onclick="showFavorites()">
@@ -81,7 +85,7 @@
                     </div>
                     <div>
                         <button class="btn btn-secondary" onclick="filterRecepiesByGroceries()">
-                            Recepti za namirnice iz kuce  
+                            Recepti za namirnice iz kuce
                         </button>
                         <p>
                             (samo reg korinsik)
@@ -89,9 +93,9 @@
                     </div>
                 </div>
                 <div class="dropdown">
-                    <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                        Search by category
+                    <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Pretrazi po kategoriji
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <a class="dropdown-item" href="#" onclick="addCategoryTag(this.innerText)">Salate</a>
@@ -103,7 +107,7 @@
                 </div>
                 <div id="tags">
                     <span class="tag alert alert-danger alter-dismissible fade show" role="alert">
-                        Kategorija 
+                        Kategorija
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -117,10 +121,10 @@
                     <div class="card-header">
                         <ul class="nav nav-tabs card-header-tabs">
                             <li class="nav-item">
-                                <a class="nav-link active" href="#">Description</a>
+                                <a class="nav-link active" href="#">Opis</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Comments</a>
+                                <a class="nav-link" href="#">Komentari</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Postupak pravljenja jela</a>
@@ -130,9 +134,9 @@
                     <div class="card-body">
                         <h5 class="card-title space">
                             <div class="align-col">
-                                Spagete 
+                                Spagete
                                 <font color="red" size="4px">
-                                    (hard)
+                                    (tesko)
                                 </font>
                             </div>
                             <div class="rating">
@@ -149,7 +153,8 @@
                                 28.08.2021
                             </div>
                         </div>
-                        <a class="btn btn-primary" data-toggle="collapse" href="#collapseId" role="button" aria-expanded="false" aria-controls="collapseId">Prikazi sastojke</a>
+                        <a class="btn btn-primary" data-toggle="collapse" href="#collapseId" role="button"
+                            aria-expanded="false" aria-controls="collapseId">Prikazi sastojke</a>
                         <div class="collapse" id="collapseId">
                             <table class="table table-stripped table-hover">
                                 <thead class="thead-dark">
@@ -170,7 +175,7 @@
                                 </tbody>
                             </table>
                         </div>
-                        
+
                     </div>
                     <div class="grade">
                         Oceni:
@@ -181,7 +186,7 @@
                         <i onclick="rate()" class='fa fa-star'></i>
                     </div>
                     <a href="">Dodaj u omiljene</a>
-                    <button class="btn btn-danger" >Delete recepie(admin samo)</button>
+                    <button class="btn btn-danger">Obrisi recept(admin samo)</button>
                 </div>
             </div>
             <div class="col-sm-12 col-md-4">
@@ -189,10 +194,10 @@
                     <div class="card-header">
                         <ul class="nav nav-tabs card-header-tabs">
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Description</a>
+                                <a class="nav-link" href="#">Opis</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" href="#">Comments</a>
+                                <a class="nav-link active" href="#">Komentari</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Postupak pravljenja jela</a>
@@ -203,25 +208,25 @@
                         <div class="card">
                             <div class="card-body">
                                 <blockquote class="blockquote mb-0">
-                                    <p>Najbolji recepet</p>
+                                    <p>Najbolji recept</p>
                                     <footer class="blockquote-footer">Korisnik 1</footer>
-                                    <button class="btn btn-danger">Delete(admin samo) </button>
+                                    <button class="btn btn-danger">Obrisi(admin samo) </button>
                                 </blockquote>
                             </div>
                         </div>
                         <div class="card">
                             <div class="card-body">
                                 <blockquote class="blockquote mb-0">
-                                    <p>Najgori recepet...</p>
+                                    <p>Najgori recept...</p>
                                     <footer class="blockquote-footer">Korisnik 2</footer>
                                 </blockquote>
                             </div>
                         </div>
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Enter comment" aria-label="Enter comment"
-                                aria-describedby="basic-addon2">
+                            <input type="text" class="form-control" placeholder="Napisi komentar"
+                                aria-label="Enter comment" aria-describedby="basic-addon2">
                             <div class="input-group-append">
-                                <button class="btn btn-outline-primary" type="button">Add</button>
+                                <button class="btn btn-outline-primary" type="button">Dodaj komentar</button>
                             </div>
                         </div>
                     </div>
@@ -232,10 +237,10 @@
                     <div class="card-header">
                         <ul class="nav nav-tabs card-header-tabs">
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Description</a>
+                                <a class="nav-link" href="#">Opis</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Comments</a>
+                                <a class="nav-link" href="#">Komentari</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link active" href="#">Postupak pravljenja jela</a>
@@ -254,13 +259,13 @@
 
     <nav aria-label="Page navigation example" class="center">
         <ul class="pagination">
-            <li class="page-item"><a class="page-link" href="#">First</a></li>
-            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+            <li class="page-item"><a class="page-link" href="#">Prvi</a></li>
+            <li class="page-item"><a class="page-link" href="#">Prethodni</a></li>
             <li class="page-item"><a class="page-link" href="#">1</a></li>
             <li class="page-item"><a class="page-link" href="#">2</a></li>
             <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item"><a class="page-link" href="#">Next</a></li>
-            <li class="page-item"><a class="page-link" href="#">Last</a></li>
+            <li class="page-item"><a class="page-link" href="#">Sledeci</a></li>
+            <li class="page-item"><a class="page-link" href="#">Poslednji</a></li>
         </ul>
     </nav>
 </body>

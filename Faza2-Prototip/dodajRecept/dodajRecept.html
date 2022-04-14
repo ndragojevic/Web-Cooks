@@ -34,7 +34,7 @@
 </head>
 
 <body>
-    
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">Web kuvar</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -45,19 +45,19 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="../login/login.html" id="login">Login </a>
+                    <a class="nav-link" href="../login/login.html" id="login">Prijava </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="register.html" id="sign-up">Register</a>
+                    <a class="nav-link" href="register.html" id="sign-up">Registracija</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="" id="logout">Logout</a>
+                    <a class="nav-link" href="" id="logout">Odjava </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="" id="create_post">Add recepie</a>
+                    <a class="nav-link" href="" id="create_post">Dodaj recept</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../recepti/recepti.html">Show recepie</a>
+                    <a class="nav-link" href="../recepti/recepti.html">Prikazi recepte </a>
                 </li>
         </div>
         </li>
@@ -76,10 +76,10 @@
     <div class="form-group">
         <div class="form-group">
             <label for="name">Ime jela</label>
-            <input type="text" class="form-control" id="name" name="name" placeholder="Name">
+            <input type="text" class="form-control" id="name" name="name" placeholder="Ime">
         </div>
         <div class="form-group">
-            <label for="image">Upload image</label>
+            <label for="image">Postavi sliku</label>
             <input type="file" class="form-control-file" id="image">
         </div>
 
@@ -98,7 +98,7 @@
                         <td>Sos</td>
                         <td>100g</td>
                         <td>
-                            <button class="btn btn-danger" onclick="obrisiNamirnicu()">Delete</button>
+                            <button class="btn btn-danger" onclick="obrisiNamirnicu()">Obrisi</button>
                         </td>
                     </tr>
                     <tr>
@@ -109,32 +109,33 @@
                             <input type="text" class="" placeholder="Kolicina namirnice">
                         </td>
                         <td>
-                            <button class="btn btn-info" onclick="dodajNamirnicu()">Add</button>
+                            <button class="btn btn-info" onclick="dodajNamirnicu()">Dodaj</button>
                         </td>
                     </tr>
                 </tbody>
             </table>
         </div>
         <div class="form-group">
-            <label for="username">How to cook</label>
-            <textarea class="form-control" id="username" name="username" placeholder="How to..." rows="5"></textarea>
+            <label for="username">Opis pripreme</label>
+            <textarea class="form-control" id="username" name="username" placeholder="Opis..." rows="5"></textarea>
         </div>
         <div class="form-group">
-            <label for="category">Category</label>
+            <label for="category">Kategorija</label>
             <select name="category" id="category" class="form-select">
                 <option value="Salate">Salate</option>
                 <option value="Torte i kolaci">Torte i kolaci</option>
                 <option value="Supe i corbe">Supe i corbe</option>
-                <option value="Morski plodovi">Morski plodovi</option>
+                <option value="Riba i morski plodovi">Riba i morski plodovi</option>
                 <option value="Glavna jela">Glavna jela</option>
             </select>
-            
+
         </div>
         <div class="form-group">
-            <label for="Work duration">Work duration in minutes</label>
-            <input type="number" class="form-control" id="Work duration" name="Work duration" placeholder="Work duration" min="0" max="100000">
+            <label for="Work duration">Vreme pripreme u minutima</label>
+            <input type="number" class="form-control" id="Work duration" name="Work duration"
+                placeholder="Vreme pripreme" min="0" max="100000">
         </div>
-        <button type="submit" class="btn btn-primary btn-success">Add recepie</button>
+        <button type="submit" class="btn btn-primary btn-success" onclick="dodajRecept()">Dodaj recept</button>
     </div>
 
 </body>
