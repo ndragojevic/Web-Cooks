@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::post('/recepti/naziv={naziv}/kategorije={kategorije}', [KorisnikController::class, "filtrirajRecepte"])->name("filtrirajRecepte");
+Route::post('/recepti', [KorisnikController::class, "filtrirajRecepte"])->name("filtrirajRecepte");
 
 Route::get('/recepti', [KorisnikController::class, "recepti"])->name('recepti');
 

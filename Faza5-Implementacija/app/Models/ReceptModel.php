@@ -37,18 +37,28 @@ class ReceptModel extends Model
         return ReceptModel::get();
     }
 
+    public static function dohvatiReceptPoId($ReceptId)
+    {
+        return ReceptModel::where('ReceptId', $ReceptId)->get();
+    }
+
     public static function dohvatiReceptePoNazivuIKategoriji($naziv, $kategorije)
     {
-        $recepti = ReceptModel::select('Naziv', 'Kategorija')->get()->toArray();
+        $recepti = ReceptModel::select('*')->get()->toArray();
         $filtered = array_filter($recepti, function ($recept) use ($naziv, $kategorije) {
             $pripadaKategoriji = false;
             foreach ($kategorije as $kategorija) {
-                if (strcasecmp($kategorija, $recept['Kategorija']) === 0) {
+                if ($kategorija == "")
+                    $pripadaKategoriji = true;
+                else if (strcasecmp($kategorija, $recept['Kategorija']) === 0) {
                     $pripadaKategoriji = true;
                     break;
                 }
             }
-            return !is_bool(strpos($recept['Naziv'], $naziv)) && $pripadaKategoriji;
+            $pripadaNaziv = false;
+            if ($naziv == "") $pripadaNaziv = true;
+            else $pripadaNaziv = !is_bool(stripos($recept['Naziv'], $naziv));
+            return $pripadaNaziv && $pripadaKategoriji;
         });
         return $filtered;
     }
@@ -58,6 +68,7 @@ class ReceptModel extends Model
     {
 
         ReceptModel::where('ReceptId', $ReceptId)->increment('ZbirOcena', $ocena);
-        return ReceptModel::where('ReceptId', $ReceptId)->increment('BrojOcena');
+        ReceptModel::where('ReceptId', $ReceptId)->increment('BrojOcena');
+        return ReceptModel::where('ReceptId', $ReceptId)->get()->toArray();
     }
 }
