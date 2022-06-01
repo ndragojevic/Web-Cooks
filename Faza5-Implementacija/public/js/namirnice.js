@@ -22,8 +22,10 @@ $(document).on("click",".dodaj",  (event) => {
     }
     document.getElementsByName('imeNamirnice')[0].value="";
     document.getElementsByName('kolicinaNamirnice')[0].value="";
+    console.log(document.getElementById('korId'));
+    let korId = document.getElementById('korId').value;
     let http = new XMLHttpRequest();
-    const dodajNamirnicuURL = `/namirnice/id=1/naziv=${imeNamirnice}/Kolicina=${kolicinaNamirnice}`;
+    const dodajNamirnicuURL = `/namirnice/id=${korId}/naziv=${imeNamirnice}/Kolicina=${kolicinaNamirnice}`;
     http.onreadystatechange  =  () => {
         let noviId;
         if (http.readyState == 4) {

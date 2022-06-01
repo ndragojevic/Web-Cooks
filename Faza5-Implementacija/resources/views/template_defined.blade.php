@@ -22,43 +22,40 @@
 
 @section('header')
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Web kuvar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+<div id="prva"> <!--id-->
+        <table>
+            <tr>
+                    <td>
+                        <form action="{{ route('pregledrecepataK') }}" method="GET">
+                        @csrf<button class="btnn" onclick="">Pregled recepata</button></form>
+                    </td>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="login.html" id="login">Prijava </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../register/register.html" id="sign-up">Registracija</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="" id="logout">Odjava</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../dodajRecept/dodajRecept.html" id="create_post">Dodaj recept</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../recepti/recepti.html">Prikazi recepte</a>
-                </li>
-                <li class="nav-item">
-                     <a class="nav-link active" href="../namirnice/namirnice.html">Prikazi namirnice</a>
-                </li>
-        </div>
-        </li>
-        </ul>
-        </div>
-    </nav>
+                
+                <td><form action="{{ route('dodajrecept') }}" method="GET">
+                    @csrf<button class="btnn" onclick="">Dodaj recept</button></form>
+                </td>
 
+                <td><form action="{{ route('omrecepti') }}" method="GET">
+                    @csrf<button class="btnn" onclick="">Omiljeni recepti</button></form>
+                </td>
+
+                <td><form action="{{ route('mojirecepti') }}" method="GET">
+                    @csrf<button class="btnn" onclick="">Moji recepti</button></form>
+                </td>
+
+                <td><form action="{{ route('prikaziKorisnikoveNamirnice',['id' =>  $kor['KorId'] ]) }}" method="GET">
+                    @csrf<button class="btnn" onclick="">Namirnice kod kuće</button></form>
+                </td>
+
+                <td><form action="{{ route('odjava')  }}" method="POST">
+                    @csrf<button class="btnn" onclick="">Odjavi se</button></form>
+                </td>
+            </tr>
+        </table>
+    </div>
 
 @endsection
 
 @section('footer')
 <hr>
-<center>Copyright WebCooks 2022</center>
 @endsection

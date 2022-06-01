@@ -38,8 +38,8 @@ table {
   font-size: small;
 }
 
-.grade {
-  justify-content: space-around;
+.rating {
+  color: whitesmoke;
 }
 
 .checked {
@@ -82,4 +82,8 @@ table {
 .row-line {
   display: flex;
   justify-content: space-between;
+}
+
+.grade {
+  color: wheat;
 }

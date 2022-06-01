@@ -4,7 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Casts\AsArrayObject;
+use Illuminate\Notifications\Notifiable;
+
 
 class ReceptModel extends Model
 {
@@ -20,7 +21,7 @@ class ReceptModel extends Model
         'Kategorija',
         'ZbirOcena',
         'BrojOcena',
-        //"SlikaJela",
+        "SlikaJela",
         "Postupak",
         "VremeIzrade",
         "Datum",
