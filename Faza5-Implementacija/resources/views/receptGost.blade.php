@@ -28,7 +28,21 @@
         </div>
         <br><br>
         <div class=container>
-            <p class="naziv">{{$recept->Naziv}}</p>
+            <div style="display:none">
+            @if ($recept['TezinaIzrade'] == 'tesko')
+                {{$boja = 'red'}}
+            @else
+                @if ($recept['TezinaIzrade'] == 'lako')
+                {{$boja = 'green'}}
+                @else
+                    {{$boja = 'yellow'}}
+                @endif
+            @endif
+        </div>
+            <p class="naziv">{{$recept->Naziv}}
+            <font color="{{ $boja }}" size="4px">
+                ({{ $recept['TezinaIzrade']}})
+            </font></p>
             <hr style="color:white;">
           <h4 style="color:white;">
             
