@@ -65,7 +65,7 @@
         <div class=row>
         <div class=col-sm-6 id="rp">
            
-           <center> <img class="receptslika" src={{"/img/".$recept->SlikaJela}} > </center><br>
+           <center> <img class="receptslika" src={{"/img/".$recept['Naziv'].'.jpg'}} > </center><br>
             
             {{$recept->Postupak}}<br><br>
             
