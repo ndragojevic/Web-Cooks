@@ -1,0 +1,17 @@
+/*
+    autor : Nikola Jovanovic
+    indeks : 2019/0440
+*/
+
+.center {
+    text-align: center;
+}
+
+body {
+    background: rgb(26, 25, 25);
+    color: whitesmoke;
+}
+
+td {
+    color: aquamarine;
+}
