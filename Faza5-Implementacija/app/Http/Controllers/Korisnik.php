@@ -8,6 +8,7 @@ use App\Models\NamirniceReceptModel;
 use App\Models\KomentarModel;
 use App\Models\OmiljeniModel;
 use App\Models\KorisnikModel;
+use Faker\Provider\Image;
 
 /**
  * Autori: Anastasija Vasic 0430/2019,
@@ -45,19 +46,19 @@ class Korisnik extends Controller
      */
     public function novirecept(Request $request)
     {
-       $this->validate($request, [
-        'name' => 'required',
-        'slika' => 'required',
-        'username' => 'required',
-        'Workduration' => 'required'
-    ], [
-        'required' => 'Polje :attribute je obavezno',
-    ]);
-   
+        $this->validate($request, [
+            'name' => 'required',
+            'slika' => 'required',
+            'username' => 'required',
+            'Workduration' => 'required'
+        ], [
+            'required' => 'Polje :attribute je obavezno',
+        ]);
+
         $recept = ReceptModel::create([
             'Naziv' => $request->name,
             'Kategorija' => $request->category,
-            'SlikaJela' => $request->slika,
+            'SlikaJela' => $request->file('slika'),
             'Postupak' => $request->username,
             'VremeIzrade' => $request->Workduration,
             'Datum' => now(),
@@ -68,6 +69,11 @@ class Korisnik extends Controller
         $request->session()->put('rid', $recept->ReceptId);
         $namirnice = array();
         $kor = KorisnikModel::where('KorId', session()->get('korid'))->first();
+        $image = $request->file('slika');
+        $imgName = $request->name . "." . $image->getClientOriginalExtension();
+        $dest = public_path('/img');
+        $image->move($dest, $imgName);
+
         return view('dodajnamirnice', ['namirnice' => $namirnice, 'kor' => $kor]);
     }
 
@@ -143,7 +149,8 @@ class Korisnik extends Controller
      * Funkcija koja sluzi za dodavanje novog komentara ispod recepta. Proverava da li su uneti svi obavezni podaci, kreira se
      * novi komentar i dodaje se u bazu. Funkcija vraca stranicu na kojoj se prikazuje recept odakle se moze otici na prikaz komentara
      */
-    public function novikomentarr(Request $request, $recept){
+    public function novikomentarr(Request $request, $recept)
+    {
         $this->validate($request, [
             'kom' => 'required'
         ], [
@@ -159,78 +166,75 @@ class Korisnik extends Controller
         $kom = KomentarModel::where('ReceptId', $recept)->get();
         $namirnice = NamirniceReceptModel::where('ReceptId', $recept)->get();
         $korisnik = KorisnikModel::where('KorId', session()->get('korid'))->first();
-        $korisnik2 = KorisnikModel::where('KorId',$r->KorId)->first();
-        if ($korisnik->rola == 'user'){
-        return view('recept', ['recept' => $r, 'komentari' => $kom, 'namirnice' => $namirnice, "kor" => $korisnik,'autor'=>$korisnik2]);
-        }
-        else  return view('receptA', ['recept' => $r, 'komentari' => $kom, 'namirnice' => $namirnice, "kor" => $korisnik,'autor'=>$korisnik2]);
-
+        $korisnik2 = KorisnikModel::where('KorId', $r->KorId)->first();
+        if ($korisnik->rola == 'user') {
+            return view('recept', ['recept' => $r, 'komentari' => $kom, 'namirnice' => $namirnice, "kor" => $korisnik, 'autor' => $korisnik2]);
+        } else  return view('receptA', ['recept' => $r, 'komentari' => $kom, 'namirnice' => $namirnice, "kor" => $korisnik, 'autor' => $korisnik2]);
     }
     /**
      * Funkcija za dodavanje recepta u omiljene, ako korisnik vec nije dodao dati recept u omiljene onda preko modela dodajemo u tabelu
      * nov omiljeni recept za datog korisnika
      */
-    public function dodajomiljeni($recept){
+    public function dodajomiljeni($recept)
+    {
 
         $kor = KorisnikModel::where('KorId', session()->get('korid'))->first();
-        $om=OmiljeniModel::where('KorId',$kor->KorId)->where('ReceptId',$recept)->first();
-        if($om!=null){
+        $om = OmiljeniModel::where('KorId', $kor->KorId)->where('ReceptId', $recept)->first();
+        if ($om != null) {
             $r = ReceptModel::find($recept);
             $kom = KomentarModel::where('ReceptId', $recept)->get();
             $namirnice = NamirniceReceptModel::where('ReceptId', $recept)->get();
-            $korisnik2 = KorisnikModel::where('KorId',$r->KorId)->first();
-            if ($kor->rola == 'user'){
-            return view('recept', ['recept' => $r, 'komentari' => $kom, 'namirnice' => $namirnice, "kor" => $kor,'autor'=>$korisnik2]);
-            }
-            else  return view('receptA', ['recept' => $r, 'komentari' => $kom, 'namirnice' => $namirnice, "kor" => $kor,'autor'=>$korisnik2]);
-    
+            $korisnik2 = KorisnikModel::where('KorId', $r->KorId)->first();
+            if ($kor->rola == 'user') {
+                return view('recept', ['recept' => $r, 'komentari' => $kom, 'namirnice' => $namirnice, "kor" => $kor, 'autor' => $korisnik2]);
+            } else  return view('receptA', ['recept' => $r, 'komentari' => $kom, 'namirnice' => $namirnice, "kor" => $kor, 'autor' => $korisnik2]);
         }
         $omiljeni = OmiljeniModel::create([
             'ReceptId' => $recept,
-    
-            'KorId' => session()->get('korid')
-            ]);
-            $omiljeni->save();
-        
-            $r = ReceptModel::find($recept);
-            $kom = KomentarModel::where('ReceptId', $recept)->get();
-            $namirnice = NamirniceReceptModel::where('ReceptId', $recept)->get();
-            $korisnik2 = KorisnikModel::where('KorId',$r->KorId)->first();
-            if ($kor->rola == 'user'){
-                return view('recept', ['recept' => $r, 'komentari' => $kom, 'namirnice' => $namirnice, "kor" => $kor,'autor'=>$korisnik2]);
-                }
-                else  return view('receptA', ['recept' => $r, 'komentari' => $kom, 'namirnice' => $namirnice, "kor" => $kor,'autor'=>$korisnik2]);
 
+            'KorId' => session()->get('korid')
+        ]);
+        $omiljeni->save();
+
+        $r = ReceptModel::find($recept);
+        $kom = KomentarModel::where('ReceptId', $recept)->get();
+        $namirnice = NamirniceReceptModel::where('ReceptId', $recept)->get();
+        $korisnik2 = KorisnikModel::where('KorId', $r->KorId)->first();
+        if ($kor->rola == 'user') {
+            return view('recept', ['recept' => $r, 'komentari' => $kom, 'namirnice' => $namirnice, "kor" => $kor, 'autor' => $korisnik2]);
+        } else  return view('receptA', ['recept' => $r, 'komentari' => $kom, 'namirnice' => $namirnice, "kor" => $kor, 'autor' => $korisnik2]);
     }
     /**
      * Funkcija za brisanje namirnice za odredjeni recept, vraca se stranica gde se dodaju namirnice za recept
      */
 
-    public function obrisimirnicu($nim){
+    public function obrisimirnicu($nim)
+    {
         NamirniceReceptModel::where('NamId', $nim)->delete();
         $namirnice = NamirniceReceptModel::where('ReceptId', session()->get('rid'))->get();
         $kor = KorisnikModel::where('KorId', session()->get('korid'))->first();
-        return view('dodajnamirnice', ['namirnice' => $namirnice,'kor'=>$kor]);
+        return view('dodajnamirnice', ['namirnice' => $namirnice, 'kor' => $kor]);
     }
     /**
-    * Funkcija koja vraca prikaz recepta
-    */
-    public function receptpregled($recept){
+     * Funkcija koja vraca prikaz recepta
+     */
+    public function receptpregled($recept)
+    {
 
         $r = ReceptModel::find($recept);
         $kom = KomentarModel::where('ReceptId', $recept)->get();
         $namirnice = NamirniceReceptModel::where('ReceptId', $recept)->get();
         $korisnik = KorisnikModel::where('KorId', session()->get('korid'))->first();
-        $korisnik2 = KorisnikModel::where('KorId',$r->KorId)->first();
+        $korisnik2 = KorisnikModel::where('KorId', $r->KorId)->first();
         if ($korisnik->rola == 'user') {
-            return view('recept', ['recept' => $r, 'komentari' => $kom, 'namirnice' => $namirnice,'kor'=>$korisnik,'autor'=>$korisnik2]);
-        } else  return view('receptA', ['recept' => $r, 'komentari' => $kom, 'namirnice' => $namirnice,'kor'=>$korisnik, 'autor'=>$korisnik2]);
-
+            return view('recept', ['recept' => $r, 'komentari' => $kom, 'namirnice' => $namirnice, 'kor' => $korisnik, 'autor' => $korisnik2]);
+        } else  return view('receptA', ['recept' => $r, 'komentari' => $kom, 'namirnice' => $namirnice, 'kor' => $korisnik, 'autor' => $korisnik2]);
     }
     /**
      * Funkcija za prikaz komentara za dati recept
      */
-    public function komentarir($rid){
+    public function komentarir($rid)
+    {
         $kom = KomentarModel::where('ReceptId', $rid)->get();
         $r = ReceptModel::where('ReceptId', $rid)->first();
 
@@ -246,30 +250,31 @@ class Korisnik extends Controller
     /**
      * Funkcija za brisanje komentara za odredjeni recept od strane admina
      */
-    public function brisanjeK($kid, $rid){
+    public function brisanjeK($kid, $rid)
+    {
         KomentarModel::where('KomId', $kid)->delete();
         $kom = KomentarModel::where('ReceptId', $rid)->get();
         $r = ReceptModel::where('ReceptId', $rid)->first();
         $korisnik = KorisnikModel::where('KorId', session()->get('korid'))->first();
         return view('komentarA', ['kom' => $kom, 'recept' => $r, "kor" => $korisnik]);
-
     }
 
     /**
      * Funkcija kojom se ulogovani korisnik odjavljuje i prelazi se na pocetnu stranicu
      */
-    public function odjava(Request $request){
-        
+    public function odjava(Request $request)
+    {
+
         $request->session()->flush();
         $r = ReceptModel::all();
         return view('index', ['recepti' => $r]);
-
     }
 
     /**
      * Funkcija za brisanje komentara od strane admina, vracamo se na stranicu koja prikazuje komentare za neki recept
      */
-    public function brisanjeR(Request $request, $recept){
+    public function brisanjeR(Request $request, $recept)
+    {
         NamirniceReceptModel::where('ReceptId', $recept)->delete();
         KomentarModel::where('ReceptId', $recept)->delete();
         OmiljeniModel::where('ReceptId', $recept)->delete();
@@ -277,7 +282,5 @@ class Korisnik extends Controller
         $r = ReceptModel::all();
         $korisnik = KorisnikModel::where('KorId', session()->get('korid'))->first();
         return view("pocetna", ['recepti' => $r, "kor" => $korisnik]);
-
     }
-
 }

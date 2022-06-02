@@ -80,7 +80,7 @@
                 @foreach ( $recepti as $recept )
                 <div class=col-sm-4>
                 
-                  <img class="receptslika" src={{"/img/".$recept['SlikaJela']}} >
+                  <img class="receptslika" src={{"/img/".$recept['Naziv'].'.jpg'}} >
                   <a href="{{ route('receptpregledGost',[$recept['ReceptId']]) }}"> <p class="naziv"> {{$recept['Naziv']}}</p></a>
                   <div class="rating" id="ocena{{$recept['ReceptId']}}">
                                     @if ($recept['BrojOcena'] != 0)

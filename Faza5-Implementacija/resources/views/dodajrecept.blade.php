@@ -65,7 +65,7 @@
             <span aria-hidden="true">&times;</span>
     </div>
 
-    <form action="{{ route('novirecept') }}" method="POST">
+    <form action="{{ route('novirecept') }}" method="POST" enctype="multipart/form-data">
         @csrf
     <div class="form-group" style="text-align: center;">
         <div class="form-group">
@@ -78,7 +78,7 @@
         <div class="form-group">
             <label for="image" style="color:white">Dodajte sliku</label><br>
             <input type="file" id="image" name="slika" 
-                style="border-radius: 5px;">
+                style="border-radius: 5px;"  style="color: white" class="slikaBoja"> 
                 @error('slika')  <font color='red'> <br>{{ $message }} </font>
             @enderror
         </div>
@@ -129,7 +129,7 @@
 <style>
 
 body {
-    background: rgb(26, 25, 25);
+    background: rgb(21, 25, 25);
 }
 #header{
     color:rgb(245, 242, 242);
@@ -143,6 +143,9 @@ body {
 .slika{
     width: 70px;
     height: 65px;
+}
+.slikaBoja {
+    color: white
 }
 #divh{
     height: 60px;
