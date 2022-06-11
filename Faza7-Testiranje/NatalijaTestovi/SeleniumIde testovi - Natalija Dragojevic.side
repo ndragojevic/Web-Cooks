@@ -1,0 +1,1453 @@
+{
+  "id": "ab3c0c1f-d729-48ad-82c1-56982d17c121",
+  "version": "2.0",
+  "name": "WebKuvar testovi - Natalija Dragojevic",
+  "url": "http://localhost:8000",
+  "tests": [{
+    "id": "a129f851-dee7-41f1-bdcd-e25902bdab47",
+    "name": "TP11-Lista omiljenih recepata-uspesno",
+    "commands": [{
+      "id": "15fafa0f-1dde-4c9a-813d-2fc2620503a2",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2be3e676-1567-40cd-9540-d56194d43f90",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b7dadbaa-851d-4b90-9890-8354b98c6aa1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btnn:nth-child(1)",
+      "targets": [
+        ["css=.btnn:nth-child(1)", "css:finder"],
+        ["xpath=//button[@onclick='']", "xpath:attributes"],
+        ["xpath=//div[@id='prva']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Prijava')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "586ee24a-f5ce-4969-aaca-32e40ba93edf",
+      "comment": "",
+      "command": "click",
+      "target": "id=korime",
+      "targets": [
+        ["id=korime", "id"],
+        ["name=korime", "name"],
+        ["css=#korime", "css:finder"],
+        ["xpath=//input[@id='korime']", "xpath:attributes"],
+        ["xpath=//center/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "466cfccf-eb07-4d8a-b085-52b39c338970",
+      "comment": "",
+      "command": "type",
+      "target": "id=korime",
+      "targets": [
+        ["id=korime", "id"],
+        ["name=korime", "name"],
+        ["css=#korime", "css:finder"],
+        ["xpath=//input[@id='korime']", "xpath:attributes"],
+        ["xpath=//center/input", "xpath:position"]
+      ],
+      "value": "aka"
+    }, {
+      "id": "a6f311ba-2350-492a-84d9-8aa52345b709",
+      "comment": "",
+      "command": "click",
+      "target": "id=lozinka",
+      "targets": [
+        ["id=lozinka", "id"],
+        ["name=lozinka", "name"],
+        ["css=#lozinka", "css:finder"],
+        ["xpath=//input[@id='lozinka']", "xpath:attributes"],
+        ["xpath=//div[2]/center/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f9fadd6b-04aa-49e3-b0e9-73ba7945d479",
+      "comment": "",
+      "command": "type",
+      "target": "id=lozinka",
+      "targets": [
+        ["id=lozinka", "id"],
+        ["name=lozinka", "name"],
+        ["css=#lozinka", "css:finder"],
+        ["xpath=//input[@id='lozinka']", "xpath:attributes"],
+        ["xpath=//div[2]/center/input", "xpath:position"]
+      ],
+      "value": "1234"
+    }, {
+      "id": "fdec1634-3e4a-4a60-bfb2-29261003f2da",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Prijava')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "35f26c81-d37f-445b-a90f-a8edf00f9bdd",
+      "comment": "",
+      "command": "click",
+      "target": "css=td:nth-child(2) .btnn",
+      "targets": [
+        ["css=td:nth-child(2) .btnn", "css:finder"],
+        ["xpath=(//button[@onclick=''])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='prva']/table/tbody/tr/td[2]/form/button", "xpath:idRelative"],
+        ["xpath=//td[2]/form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Omiljeni recepti')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a0e44067-56c5-4acc-b2e8-425851d5a5ea",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h3",
+      "targets": [
+        ["css=h3", "css:finder"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Omiljeni recepti:')]", "xpath:innerText"]
+      ],
+      "value": "Omiljeni recepti:"
+    }]
+  }, {
+    "id": "48f70fae-ab06-4ed8-9747-ad89bd1ce2bc",
+    "name": "TP12-Lista korisnikovih recepata-uspesno",
+    "commands": [{
+      "id": "bf1e55f3-10a9-4815-a4f0-e6232931686e",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bcab32c6-2094-49e4-98ec-bdc34195d0ec",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a004fec2-6e97-46bf-9a76-26e1fd10f4d0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btnn:nth-child(1)",
+      "targets": [
+        ["css=.btnn:nth-child(1)", "css:finder"],
+        ["xpath=//button[@onclick='']", "xpath:attributes"],
+        ["xpath=//div[@id='prva']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Prijava')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c06f85e3-8530-4bad-a5fe-44b95bddbc29",
+      "comment": "",
+      "command": "click",
+      "target": "id=korime",
+      "targets": [
+        ["id=korime", "id"],
+        ["name=korime", "name"],
+        ["css=#korime", "css:finder"],
+        ["xpath=//input[@id='korime']", "xpath:attributes"],
+        ["xpath=//center/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f9ee4274-2a56-410b-9ab9-517f4b472e6d",
+      "comment": "",
+      "command": "type",
+      "target": "id=korime",
+      "targets": [
+        ["id=korime", "id"],
+        ["name=korime", "name"],
+        ["css=#korime", "css:finder"],
+        ["xpath=//input[@id='korime']", "xpath:attributes"],
+        ["xpath=//center/input", "xpath:position"]
+      ],
+      "value": "aka"
+    }, {
+      "id": "f36fb049-41b7-44d3-b044-33d308376ce6",
+      "comment": "",
+      "command": "click",
+      "target": "id=lozinka",
+      "targets": [
+        ["id=lozinka", "id"],
+        ["name=lozinka", "name"],
+        ["css=#lozinka", "css:finder"],
+        ["xpath=//input[@id='lozinka']", "xpath:attributes"],
+        ["xpath=//div[2]/center/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6f814435-4481-4685-851b-d909057875b0",
+      "comment": "",
+      "command": "type",
+      "target": "id=lozinka",
+      "targets": [
+        ["id=lozinka", "id"],
+        ["name=lozinka", "name"],
+        ["css=#lozinka", "css:finder"],
+        ["xpath=//input[@id='lozinka']", "xpath:attributes"],
+        ["xpath=//div[2]/center/input", "xpath:position"]
+      ],
+      "value": "1234"
+    }, {
+      "id": "a21ca901-745b-4f67-a5ec-19c4ed3be292",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Prijava')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "967443ba-88bb-4653-b971-1b9036c2f43e",
+      "comment": "",
+      "command": "click",
+      "target": "css=td:nth-child(3) .btnn",
+      "targets": [
+        ["css=td:nth-child(3) .btnn", "css:finder"],
+        ["xpath=(//button[@onclick=''])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='prva']/table/tbody/tr/td[3]/form/button", "xpath:idRelative"],
+        ["xpath=//td[3]/form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Moji recepti')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9759e8af-ab0f-486a-a825-d33724860e09",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=h3",
+      "targets": [
+        ["css=h3", "css:finder"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Moji recepti:')]", "xpath:innerText"]
+      ],
+      "value": "Moji recepti:"
+    }, {
+      "id": "5540a640-8fe0-4e5f-9982-d773257417df",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-sm-4:nth-child(4) .naziv",
+      "targets": [
+        ["css=.col-sm-4:nth-child(4) .naziv", "css:finder"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Pasta')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "64dad852-1470-4de3-9a50-59fe6bd5524e",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=font:nth-child(5) > i",
+      "targets": [
+        ["css=font:nth-child(5) > i", "css:finder"],
+        ["xpath=//i", "xpath:position"],
+        ["xpath=//i[contains(.,'Autor: aka')]", "xpath:innerText"]
+      ],
+      "value": "Autor: aka"
+    }]
+  }, {
+    "id": "1997c862-334c-46ef-aeb5-51c89738a665",
+    "name": "TP10-Lista recepata na osnovu namirnica kod kuće – prazna lista namirnica kod kuće",
+    "commands": [{
+      "id": "cf192627-f789-47d3-9d34-f9577ceb5396",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "81f1b4df-573d-4415-ba43-d728e20ce011",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "997ccfc8-7cdb-49e1-ae60-1298accd2e6b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btnn:nth-child(1)",
+      "targets": [
+        ["css=.btnn:nth-child(1)", "css:finder"],
+        ["xpath=//button[@onclick='']", "xpath:attributes"],
+        ["xpath=//div[@id='prva']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Prijava')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8eae76ad-d328-4f49-95a9-46f54edec258",
+      "comment": "",
+      "command": "click",
+      "target": "id=korime",
+      "targets": [
+        ["id=korime", "id"],
+        ["name=korime", "name"],
+        ["css=#korime", "css:finder"],
+        ["xpath=//input[@id='korime']", "xpath:attributes"],
+        ["xpath=//center/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "266fb17c-43a1-48f0-99a1-8cc233c9b20e",
+      "comment": "",
+      "command": "type",
+      "target": "id=korime",
+      "targets": [
+        ["id=korime", "id"],
+        ["name=korime", "name"],
+        ["css=#korime", "css:finder"],
+        ["xpath=//input[@id='korime']", "xpath:attributes"],
+        ["xpath=//center/input", "xpath:position"]
+      ],
+      "value": "nadja123"
+    }, {
+      "id": "68df498f-df8f-45cc-9997-1e8667c92629",
+      "comment": "",
+      "command": "click",
+      "target": "id=lozinka",
+      "targets": [
+        ["id=lozinka", "id"],
+        ["name=lozinka", "name"],
+        ["css=#lozinka", "css:finder"],
+        ["xpath=//input[@id='lozinka']", "xpath:attributes"],
+        ["xpath=//div[2]/center/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "becec89a-143b-45b0-a997-250bd7856ba6",
+      "comment": "",
+      "command": "type",
+      "target": "id=lozinka",
+      "targets": [
+        ["id=lozinka", "id"],
+        ["name=lozinka", "name"],
+        ["css=#lozinka", "css:finder"],
+        ["xpath=//input[@id='lozinka']", "xpath:attributes"],
+        ["xpath=//div[2]/center/input", "xpath:position"]
+      ],
+      "value": "nadjica"
+    }, {
+      "id": "348028fe-1000-4df3-9ba9-78cfaa534d09",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Prijava')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "54ba3672-c4cc-4228-b34c-ea01ee4ba381",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-secondary",
+      "targets": [
+        ["css=.btn-secondary", "css:finder"],
+        ["xpath=(//button[@type='submit'])[2]", "xpath:attributes"],
+        ["xpath=//div[2]/form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Recepti za namirnice iz kuće')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "411ded6b-14d0-4238-8364-f95eea49ec92",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=html",
+      "targets": [
+        ["css=html", "css:finder"],
+        ["xpath=//html", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "718712db-8596-46c2-8a3f-ce0171699c01",
+    "name": "TP6-Azuriranje (dodavanje) namirnica kod kuce - uspesno",
+    "commands": [{
+      "id": "93c2bd98-233e-4370-a523-eae1b6c11ff8",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dd2cf817-6f85-4ca3-b96b-7b063014eeae",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4f1b8b9c-c6fc-4f80-a6cb-24e7953e77e5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btnn:nth-child(1)",
+      "targets": [
+        ["css=.btnn:nth-child(1)", "css:finder"],
+        ["xpath=//button[@onclick='']", "xpath:attributes"],
+        ["xpath=//div[@id='prva']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Prijava')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "788a8eab-8c31-41aa-91a6-a72aed5fce3c",
+      "comment": "",
+      "command": "click",
+      "target": "id=korime",
+      "targets": [
+        ["id=korime", "id"],
+        ["name=korime", "name"],
+        ["css=#korime", "css:finder"],
+        ["xpath=//input[@id='korime']", "xpath:attributes"],
+        ["xpath=//center/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "43113898-60d4-415e-be7a-1b68c5a8b5b1",
+      "comment": "",
+      "command": "type",
+      "target": "id=korime",
+      "targets": [
+        ["id=korime", "id"],
+        ["name=korime", "name"],
+        ["css=#korime", "css:finder"],
+        ["xpath=//input[@id='korime']", "xpath:attributes"],
+        ["xpath=//center/input", "xpath:position"]
+      ],
+      "value": "ranka"
+    }, {
+      "id": "83b45c5f-5b60-4f09-9500-f6bf4e074a18",
+      "comment": "",
+      "command": "click",
+      "target": "id=lozinka",
+      "targets": [
+        ["id=lozinka", "id"],
+        ["name=lozinka", "name"],
+        ["css=#lozinka", "css:finder"],
+        ["xpath=//input[@id='lozinka']", "xpath:attributes"],
+        ["xpath=//div[2]/center/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "14b2d898-e4d8-414c-b76b-6a732e02bc6e",
+      "comment": "",
+      "command": "type",
+      "target": "id=lozinka",
+      "targets": [
+        ["id=lozinka", "id"],
+        ["name=lozinka", "name"],
+        ["css=#lozinka", "css:finder"],
+        ["xpath=//input[@id='lozinka']", "xpath:attributes"],
+        ["xpath=//div[2]/center/input", "xpath:position"]
+      ],
+      "value": "nadja"
+    }, {
+      "id": "bad09b74-d81d-440c-ac6b-d257bfc1f939",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Prijava')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b67840a0-95d7-447e-84fd-65aa5475a868",
+      "comment": "",
+      "command": "click",
+      "target": "css=td:nth-child(4) .btnn",
+      "targets": [
+        ["css=td:nth-child(4) .btnn", "css:finder"],
+        ["xpath=(//button[@onclick=''])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='prva']/table/tbody/tr/td[4]/form/button", "xpath:idRelative"],
+        ["xpath=//td[4]/form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Namirnice kod kuće')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "825ff5d6-c1db-414b-b891-9af90ad073d4",
+      "comment": "",
+      "command": "click",
+      "target": "name=imeNamirnice",
+      "targets": [
+        ["name=imeNamirnice", "name"],
+        ["css=td:nth-child(1) > input", "css:finder"],
+        ["xpath=//input[@name='imeNamirnice']", "xpath:attributes"],
+        ["xpath=//td/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ca90cb52-201e-4b8e-a2e6-f94d1ba558a3",
+      "comment": "",
+      "command": "type",
+      "target": "name=imeNamirnice",
+      "targets": [
+        ["name=imeNamirnice", "name"],
+        ["css=td:nth-child(1) > input", "css:finder"],
+        ["xpath=//input[@name='imeNamirnice']", "xpath:attributes"],
+        ["xpath=//td/input", "xpath:position"]
+      ],
+      "value": "Junetina"
+    }, {
+      "id": "8ba36075-5ba8-405d-aa7c-8fd08350ed2f",
+      "comment": "",
+      "command": "click",
+      "target": "name=kolicinaNamirnice",
+      "targets": [
+        ["name=kolicinaNamirnice", "name"],
+        ["css=td:nth-child(2) > input:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='kolicinaNamirnice']", "xpath:attributes"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "72e7d6e3-830b-4450-8809-85374498c73e",
+      "comment": "",
+      "command": "type",
+      "target": "name=kolicinaNamirnice",
+      "targets": [
+        ["name=kolicinaNamirnice", "name"],
+        ["css=td:nth-child(2) > input:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='kolicinaNamirnice']", "xpath:attributes"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": "500"
+    }, {
+      "id": "cc02b138-e3b8-4e90-b34c-539c214df602",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-info",
+      "targets": [
+        ["css=.btn-info", "css:finder"],
+        ["xpath=//tr[4]/td[3]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9f85f1a5-1574-41b7-b288-af610c7acaf5",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//td[contains(.,'Junetina')]",
+      "targets": [
+        ["css=#namirnica11 > td:nth-child(1)", "css:finder"],
+        ["xpath=//tr[@id='namirnica11']/td", "xpath:idRelative"],
+        ["xpath=//tr[3]/td", "xpath:position"],
+        ["xpath=//td[contains(.,'Junetina')]", "xpath:innerText"]
+      ],
+      "value": "Junetina"
+    }]
+  }, {
+    "id": "120ec6dc-f5ee-41cd-8cc2-0d267ec37b95",
+    "name": "TP7-Azuriranje (uklanjanje) namirnica kod kuce - uspesno",
+    "commands": [{
+      "id": "f1de1b60-b3a6-4178-ac00-f5eb19ee2c57",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0b003b79-713a-4b0b-acb7-5912bcf11fd4",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3a1f6d4c-4f0c-4e13-be59-5b88e66f06f5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btnn:nth-child(1)",
+      "targets": [
+        ["css=.btnn:nth-child(1)", "css:finder"],
+        ["xpath=//button[@onclick='']", "xpath:attributes"],
+        ["xpath=//div[@id='prva']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Prijava')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "df2422d2-5e1e-410f-82ba-34d4453ccc4e",
+      "comment": "",
+      "command": "click",
+      "target": "id=korime",
+      "targets": [
+        ["id=korime", "id"],
+        ["name=korime", "name"],
+        ["css=#korime", "css:finder"],
+        ["xpath=//input[@id='korime']", "xpath:attributes"],
+        ["xpath=//center/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e00564b1-d61b-4c3d-9300-38bccef1c103",
+      "comment": "",
+      "command": "type",
+      "target": "id=korime",
+      "targets": [
+        ["id=korime", "id"],
+        ["name=korime", "name"],
+        ["css=#korime", "css:finder"],
+        ["xpath=//input[@id='korime']", "xpath:attributes"],
+        ["xpath=//center/input", "xpath:position"]
+      ],
+      "value": "ranka"
+    }, {
+      "id": "185aa47f-e920-4a94-8dd6-587a0ec4148c",
+      "comment": "",
+      "command": "click",
+      "target": "id=lozinka",
+      "targets": [
+        ["id=lozinka", "id"],
+        ["name=lozinka", "name"],
+        ["css=#lozinka", "css:finder"],
+        ["xpath=//input[@id='lozinka']", "xpath:attributes"],
+        ["xpath=//div[2]/center/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "16127d61-7066-4580-a359-ee9d6267cd75",
+      "comment": "",
+      "command": "type",
+      "target": "id=lozinka",
+      "targets": [
+        ["id=lozinka", "id"],
+        ["name=lozinka", "name"],
+        ["css=#lozinka", "css:finder"],
+        ["xpath=//input[@id='lozinka']", "xpath:attributes"],
+        ["xpath=//div[2]/center/input", "xpath:position"]
+      ],
+      "value": "nadja"
+    }, {
+      "id": "7bcf890c-069b-4c1f-9885-8a97d37bf3ad",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Prijava')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c8300fed-424d-4d19-882c-de4d7c6393f6",
+      "comment": "",
+      "command": "click",
+      "target": "css=td:nth-child(4) .btnn",
+      "targets": [
+        ["css=td:nth-child(4) .btnn", "css:finder"],
+        ["xpath=(//button[@onclick=''])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='prva']/table/tbody/tr/td[4]/form/button", "xpath:idRelative"],
+        ["xpath=//td[4]/form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Namirnice kod kuće')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "633b2ecc-abf7-493e-be50-7a5995c5d629",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=#namirnica28 > td:nth-child(1)",
+      "targets": [
+        ["css=#namirnica25 > td:nth-child(1)", "css:finder"],
+        ["xpath=//tr[@id='namirnica25']/td", "xpath:idRelative"],
+        ["xpath=//tr[3]/td", "xpath:position"],
+        ["xpath=//td[contains(.,'Krompir')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6cc21bd3-725f-4934-8fb0-b79485de1997",
+      "comment": "",
+      "command": "click",
+      "target": "id=28",
+      "targets": [
+        ["id=25", "id"],
+        ["css=#\\32 5", "css:finder"],
+        ["xpath=//button[@id='25']", "xpath:attributes"],
+        ["xpath=//tr[@id='namirnica25']/td[3]/button", "xpath:idRelative"],
+        ["xpath=//tr[3]/td[3]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "05cda8a1-b458-4fd3-a992-1f0872754f7e",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=tr:nth-child(5) > td:nth-child(1)",
+      "targets": [
+        ["css=tr:nth-child(5) > td:nth-child(1)", "css:finder"],
+        ["xpath=//tr[5]/td", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "da15bab2-dfc9-4fe0-9bb7-2597d9c3acdf",
+    "name": "TP8-Azuriranje (dodavanje) namirnica kod kuce - neuspesno (bez kolicine)",
+    "commands": [{
+      "id": "301696dc-2e00-40c3-a06d-16563b09c1d2",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "231be66c-934f-42ab-9423-acb5e5c1d679",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9df488d4-f88a-46b2-b87d-d58fdab23d1d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btnn:nth-child(1)",
+      "targets": [
+        ["css=.btnn:nth-child(1)", "css:finder"],
+        ["xpath=//button[@onclick='']", "xpath:attributes"],
+        ["xpath=//div[@id='prva']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Prijava')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "36b39644-01a3-42aa-9448-8c194169be1e",
+      "comment": "",
+      "command": "click",
+      "target": "id=korime",
+      "targets": [
+        ["id=korime", "id"],
+        ["name=korime", "name"],
+        ["css=#korime", "css:finder"],
+        ["xpath=//input[@id='korime']", "xpath:attributes"],
+        ["xpath=//center/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "72cf325f-b751-4807-9b85-d6075ecacbf7",
+      "comment": "",
+      "command": "type",
+      "target": "id=korime",
+      "targets": [
+        ["id=korime", "id"],
+        ["name=korime", "name"],
+        ["css=#korime", "css:finder"],
+        ["xpath=//input[@id='korime']", "xpath:attributes"],
+        ["xpath=//center/input", "xpath:position"]
+      ],
+      "value": "nadja123"
+    }, {
+      "id": "fecf957b-14a1-4350-9cd9-b43c39792564",
+      "comment": "",
+      "command": "click",
+      "target": "id=lozinka",
+      "targets": [
+        ["id=lozinka", "id"],
+        ["name=lozinka", "name"],
+        ["css=#lozinka", "css:finder"],
+        ["xpath=//input[@id='lozinka']", "xpath:attributes"],
+        ["xpath=//div[2]/center/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2b09d469-1071-449a-b01f-44d5c48cd63c",
+      "comment": "",
+      "command": "type",
+      "target": "id=lozinka",
+      "targets": [
+        ["id=lozinka", "id"],
+        ["name=lozinka", "name"],
+        ["css=#lozinka", "css:finder"],
+        ["xpath=//input[@id='lozinka']", "xpath:attributes"],
+        ["xpath=//div[2]/center/input", "xpath:position"]
+      ],
+      "value": "nadjica"
+    }, {
+      "id": "73ee00b6-e19a-4e6d-ac1d-48ab22fb920c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Prijava')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8b8fce8f-a79d-46aa-9322-75235708de43",
+      "comment": "",
+      "command": "click",
+      "target": "css=td:nth-child(4) .btnn",
+      "targets": [
+        ["css=td:nth-child(4) .btnn", "css:finder"],
+        ["xpath=(//button[@onclick=''])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='prva']/table/tbody/tr/td[4]/form/button", "xpath:idRelative"],
+        ["xpath=//td[4]/form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Namirnice kod kuće')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "388bcded-fd62-441e-9966-db20e52a14bc",
+      "comment": "",
+      "command": "click",
+      "target": "name=imeNamirnice",
+      "targets": [
+        ["name=imeNamirnice", "name"],
+        ["css=td:nth-child(1) > input", "css:finder"],
+        ["xpath=//input[@name='imeNamirnice']", "xpath:attributes"],
+        ["xpath=//td/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5921c6fd-cc57-4420-9bc3-8a68a304b89a",
+      "comment": "",
+      "command": "type",
+      "target": "name=imeNamirnice",
+      "targets": [
+        ["name=imeNamirnice", "name"],
+        ["css=td:nth-child(1) > input", "css:finder"],
+        ["xpath=//input[@name='imeNamirnice']", "xpath:attributes"],
+        ["xpath=//td/input", "xpath:position"]
+      ],
+      "value": "Secer"
+    }, {
+      "id": "4c0795fb-4caf-4d37-a89a-ef448a2deaca",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//td[3]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "47ade45f-7ab3-4e67-90c3-ba9065adf8d4",
+      "comment": "",
+      "command": "assertAlert",
+      "target": "Unesite oba polja!",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "be01d230-2458-4849-b430-6fa2fe16b582",
+    "name": "TP9-Azuriranje (dodavanje) namirnica kod kuce - neuspesno (bez imena namirnice)",
+    "commands": [{
+      "id": "ad4c943d-a8cd-4645-9794-0575acf2ae43",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c003a3b8-e594-4632-b201-167147075f9e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b4b08410-e49d-4223-8736-fdd7ae197a0d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btnn:nth-child(1)",
+      "targets": [
+        ["css=.btnn:nth-child(1)", "css:finder"],
+        ["xpath=//button[@onclick='']", "xpath:attributes"],
+        ["xpath=//div[@id='prva']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Prijava')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "608d0ffa-ff31-455b-af60-022ac43a334b",
+      "comment": "",
+      "command": "click",
+      "target": "id=korime",
+      "targets": [
+        ["id=korime", "id"],
+        ["name=korime", "name"],
+        ["css=#korime", "css:finder"],
+        ["xpath=//input[@id='korime']", "xpath:attributes"],
+        ["xpath=//center/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "63093a96-a0d6-4595-a117-69664c2cf956",
+      "comment": "",
+      "command": "type",
+      "target": "id=korime",
+      "targets": [
+        ["id=korime", "id"],
+        ["name=korime", "name"],
+        ["css=#korime", "css:finder"],
+        ["xpath=//input[@id='korime']", "xpath:attributes"],
+        ["xpath=//center/input", "xpath:position"]
+      ],
+      "value": "nadja123"
+    }, {
+      "id": "63f8f4e5-4e2e-4f38-bd21-5ccaf3063080",
+      "comment": "",
+      "command": "click",
+      "target": "id=lozinka",
+      "targets": [
+        ["id=lozinka", "id"],
+        ["name=lozinka", "name"],
+        ["css=#lozinka", "css:finder"],
+        ["xpath=//input[@id='lozinka']", "xpath:attributes"],
+        ["xpath=//div[2]/center/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4608a5b6-813c-4b02-a70d-502e0db7f9c0",
+      "comment": "",
+      "command": "type",
+      "target": "id=lozinka",
+      "targets": [
+        ["id=lozinka", "id"],
+        ["name=lozinka", "name"],
+        ["css=#lozinka", "css:finder"],
+        ["xpath=//input[@id='lozinka']", "xpath:attributes"],
+        ["xpath=//div[2]/center/input", "xpath:position"]
+      ],
+      "value": "nadjica"
+    }, {
+      "id": "a81ac969-4fcf-4a86-aa84-22669b6a05f1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Prijava')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a6d959be-6130-4020-9d84-a8795e029826",
+      "comment": "",
+      "command": "click",
+      "target": "css=td:nth-child(4) .btnn",
+      "targets": [
+        ["css=td:nth-child(4) .btnn", "css:finder"],
+        ["xpath=(//button[@onclick=''])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='prva']/table/tbody/tr/td[4]/form/button", "xpath:idRelative"],
+        ["xpath=//td[4]/form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Namirnice kod kuće')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "99240bc8-7a18-4db6-a434-67e9a8cf564c",
+      "comment": "",
+      "command": "click",
+      "target": "name=kolicinaNamirnice",
+      "targets": [
+        ["name=kolicinaNamirnice", "name"],
+        ["css=td:nth-child(2) > input:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='kolicinaNamirnice']", "xpath:attributes"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c131e903-0933-4bf9-8d81-2c909e267dde",
+      "comment": "",
+      "command": "type",
+      "target": "name=kolicinaNamirnice",
+      "targets": [
+        ["name=kolicinaNamirnice", "name"],
+        ["css=td:nth-child(2) > input:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='kolicinaNamirnice']", "xpath:attributes"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": "1000"
+    }, {
+      "id": "e4e785e4-e59a-4e37-b227-3896b9cc8900",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//td[3]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "03b1168d-c1bf-4388-985f-516c408c378b",
+      "comment": "",
+      "command": "assertAlert",
+      "target": "Unesite oba polja!",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "14a3e75c-110a-4c3f-a7a9-ae0a8649e145",
+    "name": "TP5 - Ocenjivanje recepta - uspesno",
+    "commands": [{
+      "id": "dc03e281-ab5f-4421-b44d-1e78e6725ba7",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "79b199c7-bae8-409a-a083-3d6776101b18",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7663ca82-b5ec-4803-9dc0-802685cfdaea",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btnn:nth-child(1)",
+      "targets": [
+        ["css=.btnn:nth-child(1)", "css:finder"],
+        ["xpath=//button[@onclick='']", "xpath:attributes"],
+        ["xpath=//div[@id='prva']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Prijava')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b0e0e097-8b75-4fd2-8a24-3983384f1b16",
+      "comment": "",
+      "command": "click",
+      "target": "id=korime",
+      "targets": [
+        ["id=korime", "id"],
+        ["name=korime", "name"],
+        ["css=#korime", "css:finder"],
+        ["xpath=//input[@id='korime']", "xpath:attributes"],
+        ["xpath=//center/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f9ff9d61-8c1d-4d54-adf4-a66d1b53224e",
+      "comment": "",
+      "command": "type",
+      "target": "id=korime",
+      "targets": [
+        ["id=korime", "id"],
+        ["name=korime", "name"],
+        ["css=#korime", "css:finder"],
+        ["xpath=//input[@id='korime']", "xpath:attributes"],
+        ["xpath=//center/input", "xpath:position"]
+      ],
+      "value": "nadja123"
+    }, {
+      "id": "03c2b7c6-f642-4849-97b3-1a568c4c49ba",
+      "comment": "",
+      "command": "click",
+      "target": "id=lozinka",
+      "targets": [
+        ["id=lozinka", "id"],
+        ["name=lozinka", "name"],
+        ["css=#lozinka", "css:finder"],
+        ["xpath=//input[@id='lozinka']", "xpath:attributes"],
+        ["xpath=//div[2]/center/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cf55986f-afb4-4a3d-9533-a064a09d64db",
+      "comment": "",
+      "command": "type",
+      "target": "id=lozinka",
+      "targets": [
+        ["id=lozinka", "id"],
+        ["name=lozinka", "name"],
+        ["css=#lozinka", "css:finder"],
+        ["xpath=//input[@id='lozinka']", "xpath:attributes"],
+        ["xpath=//div[2]/center/input", "xpath:position"]
+      ],
+      "value": "nadjica"
+    }, {
+      "id": "2203dad9-dd13-4246-9d1e-41cd611ad48c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Prijava')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3ac5a94f-2de0-4806-95a3-1e1fab9b3a8e",
+      "comment": "",
+      "command": "verifyText",
+      "target": "id=ocena47",
+      "targets": [],
+      "value": "2.25 /5"
+    }, {
+      "id": "69419cc6-e815-4e44-b7a0-bc9f46f9720b",
+      "comment": "",
+      "command": "click",
+      "target": "id=z472",
+      "targets": [
+        ["id=z472", "id"],
+        ["css=#z472", "css:finder"],
+        ["xpath=//i[@id='z472']", "xpath:attributes"],
+        ["xpath=//div[4]/div[2]/i[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b4a252da-3578-4fe4-8dd7-1d315bac1bfb",
+      "comment": "",
+      "command": "assertNotText",
+      "target": "id=ocena47",
+      "targets": [],
+      "value": "2.25 /5"
+    }]
+  }, {
+    "id": "c9155d77-7b25-44bd-b939-af0c823b4d13",
+    "name": "TP1 - Pretraga recepata prema kategoriji – uspesno (oznacena 1 kategorija)",
+    "commands": [{
+      "id": "9106b7c2-9932-4580-b8c5-9c4f7b2cc360",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "99f858fe-062f-4c90-8947-7c54ee8772c1",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7154fcdb-01e2-4206-af88-6d619874a3b8",
+      "comment": "",
+      "command": "click",
+      "target": "id=dropdownMenuButton",
+      "targets": [
+        ["id=dropdownMenuButton", "id"],
+        ["css=#dropdownMenuButton", "css:finder"],
+        ["xpath=//button[@id='dropdownMenuButton']", "xpath:attributes"],
+        ["xpath=//div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "08456f89-439b-42c1-8c10-18c9c6da8c82",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Torte i kolaci",
+      "targets": [
+        ["linkText=Torte i kolaci", "linkText"],
+        ["css=.dropdown-item:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Torte i kolaci')]", "xpath:link"],
+        ["xpath=(//a[@onclick='dodajTag(this.innerText)'])[2]", "xpath:attributes"],
+        ["xpath=(//a[contains(@href, '#')])[2]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Torte i kolaci')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c9984611-9883-4955-a39d-6f7bb3aa027f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary",
+      "targets": [
+        ["css=.btn-primary", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Pretrazi')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cff6477a-40e9-4fc8-8516-717243d2312e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.naziv",
+      "targets": [
+        ["css=.naziv", "css:finder"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Palacinke sa borovnicama')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "db09fc19-7022-444f-97c3-737d8a1817ef",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=font:nth-child(7) > i",
+      "targets": [
+        ["css=font:nth-child(7) > i", "css:finder"],
+        ["xpath=//font[3]/i", "xpath:position"],
+        ["xpath=//i[contains(.,'Kategorija: Torte i kolaci')]", "xpath:innerText"]
+      ],
+      "value": "Kategorija: Torte i kolaci"
+    }]
+  }, {
+    "id": "80a8f65a-d27a-4884-9f4c-2aa74457ae6e",
+    "name": "TP2 - Pretraga recepata prema kategoriji - oznaceno 0 kategorija",
+    "commands": [{
+      "id": "146f4bd0-36ab-4d52-baa3-b2d019f8e657",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6246ddd9-44b0-4e39-8a48-09b43574ca59",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "61028e5f-d1ff-45f3-a332-e0ed3c52024f",
+      "comment": "",
+      "command": "click",
+      "target": "id=dropdownMenuButton",
+      "targets": [
+        ["id=dropdownMenuButton", "id"],
+        ["css=#dropdownMenuButton", "css:finder"],
+        ["xpath=//button[@id='dropdownMenuButton']", "xpath:attributes"],
+        ["xpath=//div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e8800b59-98f3-4bff-8ded-098bde13810d",
+      "comment": "",
+      "command": "click",
+      "target": "id=dropdownMenuButton",
+      "targets": [
+        ["id=dropdownMenuButton", "id"],
+        ["css=#dropdownMenuButton", "css:finder"],
+        ["xpath=//button[@id='dropdownMenuButton']", "xpath:attributes"],
+        ["xpath=//div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "55f06d71-a5d5-4dae-99e8-03a4e1f00e36",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary",
+      "targets": [
+        ["css=.btn-primary", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Pretrazi')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5a820caa-7bb5-4d2a-ac48-1ec76e9eef88",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.row-line",
+      "targets": [
+        ["css=.row-line", "css:finder"],
+        ["xpath=//div[3]/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "385dd26b-9567-43db-b4b5-e4b06ab784be",
+    "name": "TP3 - Pretraga recepata na osnovu zadate reci - uspesno",
+    "commands": [{
+      "id": "6915eb49-d84a-4843-ba6a-709d1fe9282b",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "705faf72-7be3-49c7-9d3e-a7723e1c34d8",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0e2aa59f-773c-478f-89e1-5c8b28d65a02",
+      "comment": "",
+      "command": "click",
+      "target": "id=naziv",
+      "targets": [
+        ["id=naziv", "id"],
+        ["name=naziv", "name"],
+        ["css=#naziv", "css:finder"],
+        ["xpath=//input[@id='naziv']", "xpath:attributes"],
+        ["xpath=//form/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2667a23c-6958-435f-9631-46dd2c7cb3f4",
+      "comment": "",
+      "command": "type",
+      "target": "id=naziv",
+      "targets": [
+        ["id=naziv", "id"],
+        ["name=naziv", "name"],
+        ["css=#naziv", "css:finder"],
+        ["xpath=//input[@id='naziv']", "xpath:attributes"],
+        ["xpath=//form/input[2]", "xpath:position"]
+      ],
+      "value": "Palacinke"
+    }, {
+      "id": "ae21b11c-506b-42b5-82c0-ce996899b217",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary",
+      "targets": [
+        ["css=.btn-primary", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Pretrazi')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c5437dc0-9324-402b-afad-73bc64c7565e",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.naziv",
+      "targets": [
+        ["css=.naziv", "css:finder"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Palacinke sa borovnicama')]", "xpath:innerText"]
+      ],
+      "value": "Palacinke sa borovnicama"
+    }]
+  }, {
+    "id": "277d24b5-2e8e-4bf9-bb59-91c1e1d9f335",
+    "name": "TP4 - Pretraga recepata na osnovu i reci i kategorije - uspesno",
+    "commands": [{
+      "id": "4818eeb3-2701-41a4-90da-84a57cb10c28",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7d9ee207-26e4-4481-9d36-dde1862745c4",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "943ec4ab-0161-4807-8c2b-247439c56540",
+      "comment": "",
+      "command": "click",
+      "target": "id=dropdownMenuButton",
+      "targets": [
+        ["id=dropdownMenuButton", "id"],
+        ["css=#dropdownMenuButton", "css:finder"],
+        ["xpath=//button[@id='dropdownMenuButton']", "xpath:attributes"],
+        ["xpath=//div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6c86050a-7fd8-4de9-9d63-f5f65643dd48",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Glavna jela",
+      "targets": [
+        ["linkText=Glavna jela", "linkText"],
+        ["css=.dropdown-item:nth-child(5)", "css:finder"],
+        ["xpath=//a[contains(text(),'Glavna jela')]", "xpath:link"],
+        ["xpath=(//a[@onclick='dodajTag(this.innerText)'])[5]", "xpath:attributes"],
+        ["xpath=(//a[contains(@href, '#')])[5]", "xpath:href"],
+        ["xpath=//a[5]", "xpath:position"],
+        ["xpath=//a[contains(.,'Glavna jela')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f6347f5d-9b5f-4846-91fc-ddd6fd4637bd",
+      "comment": "",
+      "command": "click",
+      "target": "id=naziv",
+      "targets": [
+        ["id=naziv", "id"],
+        ["name=naziv", "name"],
+        ["css=#naziv", "css:finder"],
+        ["xpath=//input[@id='naziv']", "xpath:attributes"],
+        ["xpath=//form/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7b8554e7-ef59-4606-ae6f-786a45199acc",
+      "comment": "",
+      "command": "type",
+      "target": "id=naziv",
+      "targets": [
+        ["id=naziv", "id"],
+        ["name=naziv", "name"],
+        ["css=#naziv", "css:finder"],
+        ["xpath=//input[@id='naziv']", "xpath:attributes"],
+        ["xpath=//form/input[2]", "xpath:position"]
+      ],
+      "value": "Pasta"
+    }, {
+      "id": "6f65d9da-5d02-4779-ac0a-2e021603d6c5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary",
+      "targets": [
+        ["css=.btn-primary", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Pretrazi')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9609fbe9-82b4-4009-88bc-b2052231cf79",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.naziv",
+      "targets": [
+        ["css=.naziv", "css:finder"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Pasta')]", "xpath:innerText"]
+      ],
+      "value": "Pasta"
+    }, {
+      "id": "984c8678-9b60-42b4-8749-e2087f347249",
+      "comment": "",
+      "command": "click",
+      "target": "css=.naziv",
+      "targets": [
+        ["css=.naziv", "css:finder"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Pasta')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6353b460-b0d0-46ad-b416-79c26b22100d",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=font:nth-child(7) > i",
+      "targets": [
+        ["css=font:nth-child(7) > i", "css:finder"],
+        ["xpath=//font[3]/i", "xpath:position"],
+        ["xpath=//i[contains(.,'Kategorija: Glavna jela')]", "xpath:innerText"]
+      ],
+      "value": "Kategorija: Glavna jela"
+    }]
+  }],
+  "suites": [],
+  "urls": ["http://localhost:8000/"],
+  "plugins": []
+}
